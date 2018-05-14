@@ -45,7 +45,7 @@ class Zend_Controller_Action_Helper_JsonTest extends PHPUnit\Framework\TestCase
     {
         Zend_Controller_Action_Helper_JsonTest_Layout::resetMvcInstance();
 
-        $this->response = new Zend_Controller_Response_Http();
+        $this->response                             = new Zend_Controller_Response_Http();
         $this->response->headersSentThrowsException = false;
 
         $front = Zend_Controller_Front::getInstance();
@@ -54,7 +54,7 @@ class Zend_Controller_Action_Helper_JsonTest extends PHPUnit\Framework\TestCase
 
         $this->viewRenderer = new Zend_Controller_Action_Helper_ViewRenderer();
         Zend_Controller_Action_HelperBroker::addHelper($this->viewRenderer);
-        $this->helper = new Zend_Controller_Action_Helper_Json();
+        $this->helper               = new Zend_Controller_Action_Helper_Json();
         $this->helper->suppressExit = true;
     }
 
@@ -145,7 +145,7 @@ class Zend_Controller_Action_Helper_JsonTest extends PHPUnit\Framework\TestCase
     public function testCanKeepLayoutsWhenUsingDirect()
     {
         $layout = Zend_Layout::startMvc();
-        $data = $this->helper->direct(array('foobar'), false, true);
+        $data   = $this->helper->direct(array('foobar'), false, true);
         $this->assertTrue($layout->isEnabled());
         $this->assertFalse($this->viewRenderer->getNoRender());
     }

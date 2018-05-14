@@ -61,7 +61,7 @@ class Zend_Controller_Action_Helper_Json extends Zend_Controller_Action_Helper_A
     public function encodeJson($data, $keepLayouts = false, $encodeData = true)
     {
         $jsonHelper = new Zend_View_Helper_Json();
-        $data = $jsonHelper->json($data, $keepLayouts, $encodeData);
+        $data       = $jsonHelper->json($data, $keepLayouts, $encodeData);
 
         if (!$keepLayouts) {
             Zend_Controller_Action_HelperBroker::getStaticHelper('viewRenderer')->setNoRender(true);
@@ -86,7 +86,7 @@ class Zend_Controller_Action_Helper_Json extends Zend_Controller_Action_Helper_A
      */
     public function sendJson($data, $keepLayouts = false, $encodeData = true)
     {
-        $data = $this->encodeJson($data, $keepLayouts, $encodeData);
+        $data     = $this->encodeJson($data, $keepLayouts, $encodeData);
         $response = $this->getResponse();
         $response->setBody($data);
 
