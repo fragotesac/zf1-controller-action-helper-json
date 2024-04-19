@@ -11,8 +11,8 @@
     "prefer-stable": true,
     "require": {
         "php": "~8.0.0 || ~8.1.0 || ~8.2.0 || ~8.3.0",
-        "diablomedia/zendframework1-controller": "^1.0.3",
-        "diablomedia/zendframework1-view-helper-json": "^1.0.0"
+        "diablomedia/zendframework1-controller": "^1.0.6",
+        "diablomedia/zendframework1-view-helper-json": "^1.0.7"
     },
     "autoload": {
         "classmap": [
